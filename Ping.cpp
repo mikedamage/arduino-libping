@@ -23,23 +23,23 @@
 // Public Functions:
 Ping::Ping(int pin)
 {
-	_pin = pin;
+	this->pin = pin;
 }
 
-Ping::measure() {
+long Ping::measure() {
 	long duration;
 	sendInitPulse();
-	duration = pulseIn(_pin, HIGH);
+	duration = pulseIn(this->pin, HIGH);
 	return duration;
 }
 
 // Private Functions:
-Ping::sendInitPulse() {
+void Ping::sendInitPulse() {
 	pinMode(_pin, OUTPUT);
-	digitalWrite(_pin, LOW);
+	digitalWrite(this->pin, LOW);
 	delayMicroseconds(2);
-	digitalWrite(_pin, HIGH);
+	digitalWrite(this->pin, HIGH);
 	delayMicroseconds(5);
-	digitalWrite(_pin, LOW);
-	pinMode(_pin, INPUT);
+	digitalWrite(this->pin, LOW);
+	pinMode(this->pin, INPUT);
 }
