@@ -29,8 +29,6 @@ class Ping
 		long measure();
 	private:
 		int _pin;
-		void setToInput();
-		void setToOutput();
 		void sendInitPulse();
 }
 

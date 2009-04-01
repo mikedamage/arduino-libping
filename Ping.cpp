@@ -27,25 +27,19 @@ Ping::Ping(int pin)
 }
 
 Ping::measure() {
+	long duration;
 	sendInitPulse();
-	return pulseIn(_pin, HIGH);
+	duration = pulseIn(_pin, HIGH);
+	return duration;
 }
 
 // Private Functions:
 Ping::sendInitPulse() {
-	setToOutput();
+	pinMode(_pin, OUTPUT);
 	digitalWrite(_pin, LOW);
 	delayMicroseconds(2);
 	digitalWrite(_pin, HIGH);
 	delayMicroseconds(5);
 	digitalWrite(_pin, LOW);
-	setToInput();
-}
-
-Ping::setToInput() {
 	pinMode(_pin, INPUT);
-}
-
-Ping::setToOutput() {
-	pinMode(_pin, OUTPUT);
 }
