@@ -20,16 +20,18 @@
 #ifndef Ping_h
 #define Ping_h
 
-#include "WConstants.h"
+#include <WProgram.h>
+#include <inttypes.h>
+#include <WConstants.h>
 
 class Ping
 {
 	public:
 		Ping(int pin);
+		void sendInitPulse();
 		long measure();
 	private:
 		int _pin;
-		void sendInitPulse();
 }
 
 #endif
