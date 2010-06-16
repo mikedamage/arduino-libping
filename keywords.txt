@@ -1,2 +1,3 @@
 Ping	KEYWORD1
 measure	KEYWORD2
+sendInitPulse KEYWORD3

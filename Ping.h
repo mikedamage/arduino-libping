@@ -31,7 +31,7 @@ class Ping
 		void sendInitPulse();
 		long measure();
 	private:
-		int _pin;
+		int pin;
 };
 
 #endif

@@ -25,7 +25,7 @@
 // <<constructor>>
 Ping::Ping(int pin)
 {
-	this->_pin = pin;
+	this->pin = pin;
 }
 
 // <<destructor>>
@@ -36,17 +36,17 @@ Ping::~Ping() {
 long Ping::measure() {
 	long duration;
 	sendInitPulse();
-	duration = pulseIn(this->_pin, HIGH);
+	duration = pulseIn(this->pin, HIGH);
 	return duration;
 }
 
 // Private Functions:
 void Ping::sendInitPulse() {
-	pinMode(this->_pin, OUTPUT);
-	digitalWrite(this->_pin, LOW);
+	pinMode(this->pin, OUTPUT);
+	digitalWrite(this->pin, LOW);
 	delayMicroseconds(2);
-	digitalWrite(this->_pin, HIGH);
+	digitalWrite(this->pin, HIGH);
 	delayMicroseconds(5);
-	digitalWrite(this->_pin, LOW);
-	pinMode(this->_pin, INPUT);
+	digitalWrite(this->pin, LOW);
+	pinMode(this->pin, INPUT);
 }
