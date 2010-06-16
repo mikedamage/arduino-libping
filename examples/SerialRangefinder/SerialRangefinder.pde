@@ -21,10 +21,10 @@
 Ping ping(7);
 
 void setup() {
-  
+  Serial.begin(9600);
 }
 
 void loop() {
-  
+  long duration, inches, cm, mm;
 }
  
