@@ -2,6 +2,8 @@
 
 _A small library for controlling Parallax PING))) Ultrasonic Rangefinders_
 
+__Version:__ 0.1
+
 by Mike Green (mike.is.green[at]gmail[dot]com)
 
 ## Update
