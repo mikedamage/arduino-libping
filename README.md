@@ -6,9 +6,14 @@ __Version:__ 0.1
 
 by Mike Green (mike.is.green[at]gmail[dot]com)
 
-## Update
+## Status
 
 The library now successfully compiles in the Arduino IDE. Testing will follow.
+
+### Roadmap
+
+* Add a utility method for calculating the speed of sound at current temperature and elevation. Necessary to calculate distance accurately.
+* Include methods for returning the distance in inches, cm, mm.
 
 ## Summary
 
