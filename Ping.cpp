@@ -17,29 +17,36 @@
  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-#include "WProgram.h"
+//#include "WProgram.h"
 #include "Ping.h"
 
 // Public Functions:
+
+// <<constructor>>
 Ping::Ping(int pin)
 {
-	this->pin = pin;
+	this->_pin = pin;
+}
+
+// <<destructor>>
+Ping::~Ping() {
+	// this->_pin = 0;
 }
 
 long Ping::measure() {
 	long duration;
 	sendInitPulse();
-	duration = pulseIn(this->pin, HIGH);
+	duration = pulseIn(this->_pin, HIGH);
 	return duration;
 }
 
 // Private Functions:
 void Ping::sendInitPulse() {
-	pinMode(_pin, OUTPUT);
-	digitalWrite(this->pin, LOW);
+	pinMode(this->_pin, OUTPUT);
+	digitalWrite(this->_pin, LOW);
 	delayMicroseconds(2);
-	digitalWrite(this->pin, HIGH);
+	digitalWrite(this->_pin, HIGH);
 	delayMicroseconds(5);
-	digitalWrite(this->pin, LOW);
-	pinMode(this->pin, INPUT);
+	digitalWrite(this->_pin, LOW);
+	pinMode(this->_pin, INPUT);
 }

@@ -21,15 +21,17 @@
 #define Ping_h
 
 #include <inttypes.h>
+#include <WProgram.h>
 
 class Ping
 {
 	public:
-		Ping(uint8_t pin);
+		Ping(int pin);
+		~Ping();
 		void sendInitPulse();
 		long measure();
 	private:
-		uint8_t pin;
-}
+		int _pin;
+};
 
 #endif
