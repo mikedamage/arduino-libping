@@ -25,6 +25,12 @@ void setup() {
 }
 
 void loop() {
-  long duration, inches, cm, mm;
+  long duration;
+  duration = ping.measure();
+  Serial.print("Pulse Duration: ");
+  Serial.print(duration);
+  Serial.println(" microseconds");
+  
+  delay(1000);
 }
  
