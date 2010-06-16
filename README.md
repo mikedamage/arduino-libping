@@ -13,3 +13,7 @@ This library represents my first attempt at writing reusable C++ code, so it's g
 ## Usage
 
 Usage info will follow, once I get the library working.
+
+## License
+
+This library is released under the terms of the GNU Lesser General Public License. See [LICENSE](http://github.com/mikedamage/arduino-libping/blob/master/LICENSE) for details.
