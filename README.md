@@ -4,6 +4,10 @@ _A small library for controlling Parallax PING))) Ultrasonic Rangefinders_
 
 by Mike Green (mike.is.green[at]gmail[dot]com)
 
+## Update
+
+The library now successfully compiles in the Arduino IDE. Testing will follow.
+
 ## Summary
 
 I started writing this library during a bit of a building spree that died off a while ago. I never actually got it working, and it's languished here for quite some time. But I've resolved to get it working.
