@@ -6,6 +6,8 @@ __Version:__ 0.1
 
 by Mike Green (mike.is.green[at]gmail[dot]com)
 
+![Arduino and Parallax PING)))](http://mikegreen.s3.amazonaws.com/photos/arduino_ping.jpg)
+
 ## Update
 
 The library now successfully compiles in the Arduino IDE. Testing will follow.
